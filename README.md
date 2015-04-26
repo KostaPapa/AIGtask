@@ -17,8 +17,8 @@ apt-get install python-virtualenv
 Activate the environment, and install requirements.txt
 ```
 
-## When you are done working on the project, you may deactivate virtualenv.
+### When you are done working on the project, you may deactivate virtualenv.
 ```
 
-## Coding Style
+### Coding Style
 [PEP 8](https://www.python.org/dev/peps/pep-0008/).
