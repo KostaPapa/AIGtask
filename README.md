@@ -5,7 +5,7 @@ It's built with Python & Django
 * Python 3.4+
 * Django 1.7+
 
-## Project Setup
+### Project Setup
 ### Virtual Environment
 
 Install virtual environment and create the environment for the project.
