@@ -1,6 +1,9 @@
-# Welcome to AIG_Task Repository.
+## Welcome to AIG_Task Repository.
 ```
-A page that evaluates a simple arithmetic expression that a user inputs in a text field (ex: “2+3+5-1” should display 9)
+A page that evaluates a simple arithmetic expression that a user inputs in a text field 
+```
+```
+(ex: “2+3+5-1” should display 9)
 ```
 
 It's built with Python & Django
