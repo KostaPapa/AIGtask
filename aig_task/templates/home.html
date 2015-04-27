@@ -2,8 +2,9 @@
 
 
 {% block content %}
-
-<h1> HELLO </h1>
-
+<form method='POST' action=""> {% csrf_token %}
+{{ form.as_p }}
+<input type='submit' valeu='Join' class='btn' />
+</form>
 {% endblock %}
 
