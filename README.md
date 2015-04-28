@@ -1,6 +1,6 @@
 ## Welcome to AIG_Task Repository.
 ```
-A page that counts the number of words in a piece of text that the user submits
+A web app that counts the number of words in a piece of text that the user submits
 ```
 
 It's built with Python & Django
