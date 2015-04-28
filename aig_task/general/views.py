@@ -44,10 +44,10 @@ def get_ref_id():
 	except:
 		return ref_id
 
-def arithmetic_expression(request, ref_id):
+def words(request, ref_id):
 	print (ref_id)
-	context = {}
-	template = "home.html"
+	context = {"ref_id": ref_id}
+	template = "words.html"
 	return render(request, template, context)
 
 def home(request):
@@ -62,7 +62,7 @@ def home(request):
 			new_join_old.ip_address = get_ip(request)
 			new_join_old.save()
 		
-		return HttpResponseRedirect	("%s" %(new_join_old.ref_id))
+		return HttpResponseRedirect	("/%s" %(new_join_old.ref_id))
 		
 	context = {"form": form}
 	template = "home.html"

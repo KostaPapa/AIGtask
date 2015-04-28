@@ -40,7 +40,7 @@ class Join(models.Model):
     None.
   """
 
-  email = models.EmailField(unique=True)
+  email = models.EmailField()
   ref_id = models.CharField(max_length=120, default='ABC')
   ip_address = models.CharField(max_length=120, default='ABC')
   
