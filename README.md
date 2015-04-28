@@ -1,9 +1,6 @@
 ## Welcome to AIG_Task Repository.
 ```
-A page that evaluates a simple arithmetic expression that a user inputs in a text field 
-```
-```
-(ex: “2+3+5-1” should display 9)
+A page that counts the number of words in a piece of text that the user submits
 ```
 
 It's built with Python & Django
@@ -32,3 +29,12 @@ $ deactivate aig_task
 
 ### Coding Style
 [PEP 8](https://www.python.org/dev/peps/pep-0008/).
+
+### Setting up the project
+```
+$ python manage.py makemigrations
+$ python manage.py migrate
+$ python manage.py createsuperuser
+$ python manage.py runserver
+```
+
