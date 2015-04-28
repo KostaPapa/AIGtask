@@ -40,3 +40,11 @@ $ python manage.py runserver
 127.0.0.1:8000/
 ```
 
+### Extras
+```
+* Created a function in views.py that gets user's ip address once they register with their email address.
+* Created a function in views.py that generates Universal Unique Identifiers (UUIDs) and 
+  assigns them to each registered user.
+* Implemented Jumbotron Template for Bootstrap.
+```
+
