@@ -22,7 +22,7 @@ Activate the environment, and install packages according to the requirements.txt
 $ pip install -r /path/to/requirements.txt
 ```
 
-When you are done working on the project, you may deactivate virtualenv.
+When done working on the project, you may deactivate virtualenv.
 ```
 $ deactivate aig_task
 ```
