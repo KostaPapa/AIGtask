@@ -20,7 +20,7 @@
 """
 
 from django.shortcuts import render, HttpResponseRedirect
-from .forms import EmailForm, JoinForm
+from .forms import JoinForm
 from .models import Join
 import uuid
 
@@ -44,29 +44,34 @@ def get_ref_id():
 	except:
 		return ref_id
 
+
 def words(request, ref_id):
-	print (ref_id)
+	
+
 	context = {"ref_id": ref_id}
 	template = "words.html"
 	return render(request, template, context)
 
 def home(request):
-	try:
-		join_id = request.session['join_id_ref']
-		obj = Join.objects.get(id=join_id)
-	except:
-		obj = None
-
+	word_counter = 1
 	form = JoinForm(request.POST or None)
 	if form.is_valid():
 		new_join = form.save(commit=False)
 		email = (form.cleaned_data['email'])
-		new_join_old, created = Join.objects.get_or_create(email=email)
+		text = (form.cleaned_data['text'])
+		new_join_old, created = Join.objects.get_or_create(email=email, text=text)
 		if created:
 			new_join_old.ref_id = get_ref_id()
 			new_join_old.ip_address = get_ip(request)
 			new_join_old.save()
-		
+
+			for word in new_join_old.text:
+				if (word == ' '):
+					word_counter = word_counter + 1
+			print (word_counter)
+
+
+
 		return HttpResponseRedirect	("/%s" %(new_join_old.ref_id))
 		
 	context = {"form": form}

@@ -19,30 +19,8 @@
 from django import forms
 from .models import Join
 
-class EmailForm(forms.Form):
-  """
-  <Purpose>
-    Allows a user to join by typing their email address in the form.
-      
-  <Arguments>
-    forms.Form:
-      Each form is a Python class that subclasses django.forms.Form.
-
-  <Exceptions>
-    None.
-
-  <Side Effects>
-    None.
-
-  <Returns>
-    None.
-  """
-  
-  username = forms.CharField(required=False)
-  email = forms.EmailField()
-
 
 class JoinForm(forms.ModelForm):
   class Meta:
     model = Join
-    fields = ["email",]
+    fields = ["email", "text",]

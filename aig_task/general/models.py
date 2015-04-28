@@ -41,6 +41,8 @@ class Join(models.Model):
   """
 
   email = models.EmailField()
+  text = models.TextField('Enter Text', blank=True)
+
   ref_id = models.CharField(max_length=120, default='ABC')
   ip_address = models.CharField(max_length=120, default='ABC')
   
@@ -52,5 +54,3 @@ class Join(models.Model):
 
   class Meta:
     unique_together = ("email", "ref_id",)
-
-
